@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Atkinson';
+  src: url('assets/fonts/Atkinson-Hyperlegible-Regular-102.woff'),
+    url('assets/fonts/Atkinson-Hyperlegible-Regular-102.woff') format('woff');
+}
+
+body {
+  font-family: 'Atkinson', Arial, sans-serif !important;
+  font-weight: normal;
+  font-style: normal;
+}

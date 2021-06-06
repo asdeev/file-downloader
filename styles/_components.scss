@@ -1,0 +1,116 @@
+@import 'colors';
+
+.border-top {
+  border-top: 1px solid $dark-gray;
+}
+
+.status-available {
+  color: $green;
+}
+
+.status-scheduled {
+  color: $orange;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .button {
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 100%;
+    font-family: inherit;
+    padding: 8px;
+    transition: none;
+    user-select: none;
+  }
+}
+
+.button {
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 100%;
+  font-family: inherit;
+  padding: 8px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  user-select: none;
+}
+
+.button:disabled {
+  cursor: default;
+}
+
+.button:hover:not([disabled]),
+.button:focus:not([disabled]) {
+  background-color: $light-gray;
+}
+
+.button:focus:not([disabled]) {
+  border: 1px solid $gray;
+}
+
+.download-manager {
+  border: 1px solid $dark-gray;
+  width: 75%;
+
+  .download-table {
+    @extend .border-top;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    @media screen and (prefers-reduced-motion: reduce) {
+      .row {
+        th {
+          padding-left: 8px;
+          padding-top: 16px;
+          padding-right: 8px;
+          padding-bottom: 8px;
+          text-align: left;
+        }
+        td {
+          border-top: 1px solid $dark-gray;
+          padding-left: 8px;
+          padding-top: 16px;
+          padding-right: 8px;
+          padding-bottom: 16px;
+        }
+        transition: none;
+      }
+    }
+
+    .row {
+      th {
+        padding-left: 8px;
+        padding-top: 16px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+      }
+      td {
+        @extend .border-top;
+        padding-left: 8px;
+        padding-top: 16px;
+        padding-right: 8px;
+        padding-bottom: 16px;
+      }
+      -webkit-transition: background-color 0.2s ease-in;
+      -moz-transition: background-color 0.2s ease-in;
+      -o-transition: background-color 0.2s ease-in;
+      transition: background-color 0.2s ease-in;
+    }
+
+    .row:hover,
+    .row:focus {
+      background-color: $light-gray;
+    }
+
+    .selected-row {
+      background-color: $gray !important;
+    }
+  }
+}
