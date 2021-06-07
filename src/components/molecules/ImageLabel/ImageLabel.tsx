@@ -17,14 +17,14 @@ interface propTypes extends FontAwesomeIconProps {
 const ImageLabel: React.FC<propTypes> = (props: propTypes) => {
   const { ariaHidden, icon, imageClass, label, labelClass } = props;
   return (
-    <>
+    <div data-test-id="image-label">
       <FontAwesomeIcon
         className={imageClass}
         icon={icon}
         aria-hidden={ariaHidden ? 'true' : 'false'}
       />
       <Label className={`margin-left-8 ${labelClass}`} value={label} />
-    </>
+    </div>
   );
 };
 

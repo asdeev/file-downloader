@@ -64,7 +64,7 @@ const DownloadManager: React.FC<propTypes> = (props: propTypes) => {
   };
 
   return (
-    <div className="download-manager">
+    <div data-testid="download-manager" className="download-manager">
       <DownloadHeader
         filesList={downloadData}
         onChange={handleFileSelectAllChange}

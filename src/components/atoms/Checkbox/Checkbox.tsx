@@ -13,6 +13,7 @@ const Checkbox: React.FC<propTypes> = (props: propTypes) => {
   const { className, disabled, indeterminate, name, onChange, value } = props;
   return (
     <input
+      data-testid="checkbox"
       className={className}
       type="checkbox"
       name={name}

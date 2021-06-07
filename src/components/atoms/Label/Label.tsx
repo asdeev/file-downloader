@@ -7,7 +7,11 @@ interface propTypes {
 
 const Label: React.FC<propTypes> = (props: propTypes) => {
   const { className, value } = props;
-  return <span className={`label ${className}`}>{value}</span>;
+  return (
+    <span data-testid="label" className={`label ${className}`}>
+      {value}
+    </span>
+  );
 };
 
 export default Label;

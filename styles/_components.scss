@@ -63,20 +63,25 @@
     border-collapse: collapse;
     border-spacing: 0px;
     width: 100%;
+
+    .selected-row {
+      td {
+        background-color: $gray !important;
+      }
+    }
+
     @media screen and (prefers-reduced-motion: reduce) {
       .row {
         th {
-          padding-left: 8px;
+          padding: 8px;
           padding-top: 16px;
-          padding-right: 8px;
-          padding-bottom: 8px;
           text-align: left;
         }
         td {
           border-top: 1px solid $dark-gray;
-          padding-left: 8px;
+          cursor: pointer;
+          padding: 8px;
           padding-top: 16px;
-          padding-right: 8px;
           padding-bottom: 16px;
         }
         transition: none;
@@ -85,17 +90,16 @@
 
     .row {
       th {
-        padding-left: 8px;
+        padding: 8px;
         padding-top: 16px;
-        padding-right: 8px;
-        padding-bottom: 8px;
         text-align: left;
       }
       td {
         @extend .border-top;
-        padding-left: 8px;
+        cursor: pointer;
+        border-top: 1px solid $dark-gray;
+        padding: 8px;
         padding-top: 16px;
-        padding-right: 8px;
         padding-bottom: 16px;
       }
       -webkit-transition: background-color 0.2s ease-in;
@@ -106,11 +110,9 @@
 
     .row:hover,
     .row:focus {
-      background-color: $light-gray;
-    }
-
-    .selected-row {
-      background-color: $gray !important;
+      td {
+        background-color: $light-gray;
+      }
     }
   }
 }
