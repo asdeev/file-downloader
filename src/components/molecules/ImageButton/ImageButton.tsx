@@ -31,6 +31,7 @@ const ImageLabel: React.FC<propTypes> = (props: propTypes) => {
 
   return (
     <Button
+      data-testid="image-button"
       className={className}
       type="button"
       onClick={onClick}

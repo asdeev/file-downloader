@@ -7,7 +7,11 @@ interface propTypes {
 
 const Row: React.FC<propTypes> = (props: propTypes) => {
   const { children, className } = props;
-  return <tr className={`row ${className}`}>{children}</tr>;
+  return (
+    <tr data-testid="row" className={`row ${className}`}>
+      {children}
+    </tr>
+  );
 };
 
 export default Row;

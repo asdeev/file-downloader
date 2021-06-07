@@ -52,14 +52,6 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest-setup.ts"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
-    }
-  },
   "keywords": [
     "rts",
     "react",
@@ -79,6 +71,7 @@
     "@babel/runtime": "^7.12.5",
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
     "@types/jest": "^26.0.23",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
@@ -117,6 +110,7 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0",
     "terser-webpack-plugin": "^4.2.2",
+    "ts-node": "^10.0.0",
     "typescript": "^4.0.3",
     "url-loader": "^4.1.1",
     "webpack": "^4.44.2",
