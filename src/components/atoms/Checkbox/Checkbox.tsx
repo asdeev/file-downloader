@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 interface propTypes {
+  ariaLabel?: string;
   className?: string;
   disabled?: boolean;
   indeterminate: boolean;
@@ -10,7 +11,15 @@ interface propTypes {
 }
 
 const Checkbox: React.FC<propTypes> = (props: propTypes) => {
-  const { className, disabled, indeterminate, name, onChange, value } = props;
+  const {
+    ariaLabel,
+    className,
+    disabled,
+    indeterminate,
+    name,
+    onChange,
+    value,
+  } = props;
   return (
     <input
       data-testid="checkbox"
@@ -21,6 +30,7 @@ const Checkbox: React.FC<propTypes> = (props: propTypes) => {
       ref={(el) => el && (el.indeterminate = indeterminate)}
       onChange={onChange}
       disabled={disabled}
+      aria-label={ariaLabel}
     />
   );
 };

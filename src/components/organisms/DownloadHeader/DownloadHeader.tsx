@@ -30,6 +30,7 @@ const DownloadHeader: React.FC<propTypes> = (props: propTypes) => {
         name="selectAll"
         onChange={onChange}
         value={selectedCount === availableCount}
+        ariaLabel="Select All Checkbox"
       />
       <Label className="margin-left-8" value={selectedLabel} />
       <ImageButton
