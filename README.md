@@ -2,6 +2,8 @@
 
 ## Setup
 
+Ensure that Node.js is installed on your machine.
+
 Simply run `npm install` to get all dependencies installed.
 
 This application is setup with pre-commit hooks, using Husky, to ensure code quality is to the highest standard.
@@ -24,7 +26,7 @@ If VSCode/VSCodium is being used for development, it is recommended to download 
 
 `style-lint`: Runs stylelint on the specified directory without emitting (used during deployment)
 
-`test`: Opens Cypress for testing the application
+`test`: Runs Jest for testing the application
 
 
 ## Base application
@@ -37,7 +39,7 @@ The `@loadable/component` library also has been included as a part of this base 
 
 `src`: Directory that contains all source code for the base application
 
-`src/components`: Directory that contains single use components specific to the application (layout components, headers, footers, etc)
+`src/components`: Directory that contains various components following the atomic design principle
 
 `src/pages`: Directory that contains all the various pages that will be a part of the application
 
@@ -45,7 +47,7 @@ The `@loadable/component` library also has been included as a part of this base 
 
 ### Application Adjustments
 
-Please make any fine tuning adjustments for the application within `webpack.config.js`, `.babelrc`, `tsconfig.json`.
+Please make any fine tuning adjustments for the application within `webpack.config.js`, `.babelrc`, `tsconfig.json`, `jest-config.ts`.
 
 For linter adjustments, please check out `.eslintrc`, `.eslintignore`, `.prettierrc`, `.stylelintrc`.
 
@@ -55,20 +57,6 @@ To adjust the formatting done with EditorConfig, please check out `.editorconfig
 
 Please check out the `webpack.config.js` file to see which directories have aliases assigned, which will allow easier imports for using the various components.
 
-## Cypress
+## Jest
 
-Cypress is used for testing. Please check out the `cypress` directory for any development related to it along with the `cypress.json` file for configuration. Component testing is done using the `@cypress/react` plugin. For more information, check out the Cypress Documentation.
-
-## Best Practices
-
-Do the imports in the following order:
-
-React
-NPM libraries (fontawesome, react-bootstrap react-router, etc)
-Custom components
-Shared helpers
-Component specific helpers
-Shared constants
-Component specific constants
-Shared types
-Component specific types
+Cypress is used for testing. Any setup configuration needed can be added to `jest-setup.ts`. Component folders should contain their own tests.
