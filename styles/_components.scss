@@ -66,25 +66,7 @@
 
     .selected-row {
       td {
-        background-color: $gray !important;
-      }
-    }
-
-    @media screen and (prefers-reduced-motion: reduce) {
-      .row {
-        th {
-          padding: 8px;
-          padding-top: 16px;
-          text-align: left;
-        }
-        td {
-          border-top: 1px solid $dark-gray;
-          cursor: pointer;
-          padding: 8px;
-          padding-top: 16px;
-          padding-bottom: 16px;
-        }
-        transition: none;
+        background-color: $gray;
       }
     }
 
@@ -94,18 +76,27 @@
         padding-top: 16px;
         text-align: left;
       }
+      @media screen and (prefers-reduced-motion: reduce) {
+        td {
+          border-top: 1px solid $dark-gray;
+          cursor: pointer;
+          padding: 8px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          transition: none;
+        }
+      }
       td {
         @extend .border-top;
         cursor: pointer;
-        border-top: 1px solid $dark-gray;
         padding: 8px;
         padding-top: 16px;
         padding-bottom: 16px;
+        -webkit-transition: background-color 0.2s ease-in;
+        -moz-transition: background-color 0.2s ease-in;
+        -o-transition: background-color 0.2s ease-in;
+        transition: background-color 0.2s ease-in;
       }
-      -webkit-transition: background-color 0.2s ease-in;
-      -moz-transition: background-color 0.2s ease-in;
-      -o-transition: background-color 0.2s ease-in;
-      transition: background-color 0.2s ease-in;
     }
 
     .row:hover,
