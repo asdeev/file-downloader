@@ -29,7 +29,7 @@ const DownloadHeader: React.FC<propTypes> = (props: propTypes) => {
         indeterminate={selectedCount > 0 && selectedCount < availableCount}
         name="selectAll"
         onChange={onChange}
-        value={selectedCount > 0}
+        value={selectedCount === availableCount}
       />
       <Label className="margin-left-8" value={selectedLabel} />
       <ImageButton
