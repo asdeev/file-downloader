@@ -1,7 +1,12 @@
 import * as React from 'react';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCircle, faDownload } from '@fortawesome/free-solid-svg-icons';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
+
+// import and add icons here to use for nested children components to use
+library.add(faCircle, faDownload);
 
 import DownloadPage from './DownloadPage';
 

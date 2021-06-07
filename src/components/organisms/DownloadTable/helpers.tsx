@@ -12,7 +12,7 @@ const generateBody = (
   tableHeaders: TableHeader[],
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 ): JSX.Element[] =>
-  tableData.map((data) => (
+  tableData.map((data, idx) => (
     <Row
       key={uniqueKey()}
       className={`${'selected' in data && data.selected && 'selected-row'}`}
@@ -26,6 +26,7 @@ const generateBody = (
               indeterminate={false}
               onChange={onChange}
               disabled={data.status.toLowerCase() !== 'available'}
+              ariaLabel={`Row ${idx} Checkbox`}
             />
           </td>
         ) : (
