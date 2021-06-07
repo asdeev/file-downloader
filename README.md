@@ -12,6 +12,8 @@ If VSCode/VSCodium is being used for development, it is recommended to download 
 
 ## Commands
 
+To run a command, format it as `npm run <command>`.
+
 `start-dev`: Starts the local server for development
 
 `build-dev`: Builds the code for deployment to dev servers
@@ -59,4 +61,4 @@ Please check out the `webpack.config.js` file to see which directories have alia
 
 ## Jest
 
-Cypress is used for testing. Any setup configuration needed can be added to `jest-setup.ts`. Component folders should contain their own tests.
+Jest is used for testing. Any setup configuration needed can be added to `jest-setup.ts`. Component folders should contain their own tests.
