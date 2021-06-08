@@ -57,8 +57,6 @@
     "react",
     "typescript"
   ],
-  "author": "Zaid Bhura",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
