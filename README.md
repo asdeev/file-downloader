@@ -33,7 +33,7 @@ To run a command, format it as `npm run <command>`.
 
 ## Base application
 
-The base application includes React, Typescript, reactstrap, Recoil, and Font Awesome.
+The base application includes React, Typescript, and Font Awesome.
 
 The `@loadable/component` library also has been included as a part of this base application if dynamic loading is desired.
 
