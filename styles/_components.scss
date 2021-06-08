@@ -54,6 +54,16 @@
   border: 1px solid $gray;
 }
 
+.label {
+  &.sentence-case:first-letter {
+    text-transform: capitalize;
+  }
+
+  &.title-case {
+    text-transform: capitalize;
+  }
+}
+
 .download-manager {
   border: 1px solid $dark-gray;
   width: 75%;
@@ -76,6 +86,7 @@
         padding-top: 16px;
         text-align: left;
       }
+
       @media screen and (prefers-reduced-motion: reduce) {
         td {
           border-top: 1px solid $dark-gray;
@@ -86,6 +97,7 @@
           transition: none;
         }
       }
+
       td {
         @extend .border-top;
         cursor: pointer;

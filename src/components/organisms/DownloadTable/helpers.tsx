@@ -38,7 +38,7 @@ const generateBody = (
                   icon="circle"
                   imageClass={`status-${data[key]}`}
                   label={data[key]}
-                  labelClass={`margin-right-8`}
+                  labelClass={`margin-right-8 title-case`}
                 />
               ) : (
                 data[key]
